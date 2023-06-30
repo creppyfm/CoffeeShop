@@ -32,29 +32,12 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     ComposableExample()
-                    //Text("Hello, Android!")
-                    //Greeting("Android")
                 }
             }
         }
     }
 }
 
-/*@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}*/
-
-/*@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CoffeeShopTheme {
-        Greeting("Android")
-    }
-}*/
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
