@@ -31,7 +31,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ComposableExample()
+                    //ComposableExample()
+                    //OffersPage()
+                    App()
                 }
             }
         }
