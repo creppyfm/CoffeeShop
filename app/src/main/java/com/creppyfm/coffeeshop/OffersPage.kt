@@ -42,6 +42,7 @@ fun OffersPage() {
         Offer(title = "Early Bird Special", description = "10% off. Offer valid weekdays from 4am until 7am.")
         Offer(title = "Welcome Gift", description = "25% off on your first order of $10 or more.")
         Offer(title = "Night Owl", description = "10% off. Offer valid weekdays from 7pm until 9pm.")
+        Offer(title = "Intern Special", description = "10% off when you buy 3 or more regular coffees.")
     }
 }
 
