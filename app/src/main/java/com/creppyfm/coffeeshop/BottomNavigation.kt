@@ -48,7 +48,7 @@ fun NavBarPreview() {
 
 @Composable
 fun NavBar(selectedRoute: String = Routes.MenuPage.route,
-           onChange: (String) -> Unit
+           onChange: (String) -> Unit = {}
            ) {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,

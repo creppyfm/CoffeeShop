@@ -31,13 +31,13 @@ import com.creppyfm.coffeeshop.ui.theme.Primary
 @Composable
 fun MenuPage(dataManager: DataManager) {
     LazyColumn {
-        items(dataManager.menu) { it ->
+        items(dataManager.menu) { menuCategory ->
             Text(
-                it.name,
+                menuCategory.name,
                 color = Primary,
                 modifier = Modifier.padding(10.dp, 20.dp, 10.dp, 10.dp)
             )
-            it.products.forEach {
+            menuCategory.products.forEach {
                 Card(
                     shape = RoundedCornerShape(20.dp),
                     elevation = CardDefaults.cardElevation(

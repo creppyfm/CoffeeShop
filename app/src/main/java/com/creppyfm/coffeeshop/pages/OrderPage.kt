@@ -16,7 +16,9 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
 import com.creppyfm.coffeeshop.DataManager
@@ -36,7 +38,9 @@ fun OrderPage(dataManager: DataManager) {
                     ),
                     modifier = Modifier.padding(16.dp)
                 ) {
-                    Text("Whoops, there are no items in your order!", style = MaterialTheme.typography.bodyLarge)
+                    Text("Whoops, there are no items in your order!",
+                        style = MaterialTheme.typography.bodyLarge,
+                    color = Color.Black)
                 }
             }
         }
