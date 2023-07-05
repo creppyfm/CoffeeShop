@@ -13,7 +13,7 @@ import com.creppyfm.coffeeshop.ui.theme.CoffeeShopTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val dataManager = ViewModelProvider(this)[DataManager::class.java]
+        var dataManager = ViewModelProvider(this)[DataManager::class.java]
         setContent {
             CoffeeShopTheme {
                 // A surface container using the 'background' color from the theme

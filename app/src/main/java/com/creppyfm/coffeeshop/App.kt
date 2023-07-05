@@ -36,7 +36,7 @@ fun App_Preview() {
 @Composable
 fun App(dataManager: DataManager) {
     val selectedRoute = remember {
-        mutableStateOf(Routes.MenuPage.route)
+        mutableStateOf("menu")
     }
 
     Scaffold(
@@ -47,22 +47,24 @@ fun App(dataManager: DataManager) {
                 actions = {}
             )
         },
+        content = {
+            when(selectedRoute.value) {
+                Routes.MenuPage.route -> MenuPage(dataManager)
+                Routes.OffersPage.route -> OffersPage()
+                Routes.OrderPage.route -> OrderPage(dataManager)
+                Routes.InfoPage.route -> InfoPage()
+            }
+        },
         bottomBar = {
             NavBar(
                 selectedRoute = selectedRoute.value,
                 onChange = {newRoute ->
-                selectedRoute.value = newRoute
-            })
+                    selectedRoute.value = newRoute
+                })
         }
-    ) {
-        when(selectedRoute.value) {
-            Routes.MenuPage.route -> MenuPage(dataManager)
-            Routes.OffersPage.route -> OffersPage()
-            Routes.OrderPage.route -> OrderPage(dataManager)
-            Routes.InfoPage.route -> InfoPage()
-        }
-    }
+    )
 }
+
 @Composable
 fun AppTitle() {
     Box(

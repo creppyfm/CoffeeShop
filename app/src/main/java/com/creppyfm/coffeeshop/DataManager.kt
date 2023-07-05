@@ -23,7 +23,7 @@ class DataManager(app: Application): AndroidViewModel(app) {
     }
 
     fun addToCart(product: Product) {
-        var found: Boolean = false
+        var found = false
         cart.forEach {
             if (product.id == it.product.id) {
                 it.quantity++
